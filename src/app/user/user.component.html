@@ -1,1 +1,22 @@
-<p>user works!</p>
+<div>
+  <button (click)="onSelectUser()">
+    <!-- <img [src]="imagePath" [alt]="selectedUser.name" /> -->
+    <img [src]="imagePath" [alt]="name" />
+    <!-- Simplifying the Property Binding input -->
+
+    <!-- <img
+      [src]="'assets/images/users/' + selectedUser.avatar"
+      [alt]="selectedUser.name"
+    /> -->
+    <!-- Property Binding -->
+
+    <span>
+      {{ name }}
+      <!-- Interpolation -->
+    </span>
+    <!-- <span>
+      {{ selectedUser.name }} 
+      Interpolation 
+    </span>  -->
+  </button>
+</div>
