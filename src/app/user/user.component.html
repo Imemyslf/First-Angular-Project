@@ -1,7 +1,7 @@
-<div>
-  <button (click)="onSelectUser()">
+<app-card>
+  <button [class.active]="selected" (click)="onSelectUser()">
     <!-- <img [src]="imagePath" [alt]="selectedUser.name" /> -->
-    <img [src]="imagePath" [alt]="name" />
+    <img [src]="imagePath" [alt]="user.name" />
     <!-- Simplifying the Property Binding input -->
 
     <!-- <img
@@ -11,7 +11,7 @@
     <!-- Property Binding -->
 
     <span>
-      {{ name }}
+      {{ user.name }}
       <!-- Interpolation -->
     </span>
     <!-- <span>
@@ -19,4 +19,4 @@
       Interpolation 
     </span>  -->
   </button>
-</div>
+</app-card>
