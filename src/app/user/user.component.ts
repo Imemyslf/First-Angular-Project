@@ -7,10 +7,9 @@ import {
   Output,
   EventEmitter,
 } from '@angular/core';
-// import { Component, signal, computed } from '@angular/core';
 
 import { User } from './user.model';
-import { CardComponent } from "../shared/card/card.component";
+import { CardComponent } from '../shared/card/card.component';
 
 @Component({
   selector: 'app-user',
@@ -22,11 +21,6 @@ export class UserComponent {
   @Input({ required: true }) user!: User;
   @Input({ required: true }) selected!: boolean;
   @Output() select = new EventEmitter<string>();
-  // avatar = input.required<string>();
-  // name = input.required<string>();
-  // select = output<string>();
-
-  // imagePath = computed(() => `assets/images/users/${this.avatar()}`);
   get imagePath() {
     return `assets/images/users/${this.user.avatar}`;
   }
@@ -35,6 +29,14 @@ export class UserComponent {
     this.select.emit(this.user.id);
   }
 }
+
+// import { Component, signal, computed } from '@angular/core';
+
+// avatar = input.required<string>();
+// name = input.required<string>();
+// select = output<string>();
+
+// imagePath = computed(() => `assets/images/users/${this.avatar()}`);
 
 // export class UserComponent {
 //   // selectedUser = DUMMY_USERS[randomIndex];

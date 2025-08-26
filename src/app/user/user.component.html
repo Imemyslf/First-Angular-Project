@@ -1,22 +1,24 @@
 <app-card>
   <button [class.active]="selected" (click)="onSelectUser()">
-    <!-- <img [src]="imagePath" [alt]="selectedUser.name" /> -->
     <img [src]="imagePath" [alt]="user.name" />
     <!-- Simplifying the Property Binding input -->
-
-    <!-- <img
-      [src]="'assets/images/users/' + selectedUser.avatar"
-      [alt]="selectedUser.name"
-    /> -->
-    <!-- Property Binding -->
 
     <span>
       {{ user.name }}
       <!-- Interpolation -->
     </span>
-    <!-- <span>
+  </button>
+</app-card>
+
+<!-- <img [src]="imagePath" [alt]="selectedUser.name" /> -->
+
+<!-- <img
+      [src]="'assets/images/users/' + selectedUser.avatar"
+      [alt]="selectedUser.name"
+    /> -->
+<!-- Property Binding -->
+
+<!-- <span>
       {{ selectedUser.name }} 
       Interpolation 
     </span>  -->
-  </button>
-</app-card>
